@@ -19,7 +19,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-    <!-- Configuração extra do Tailwind -->
+    <!-- Configuração extra do Tailwind para evitar conflitos (opcional) -->
     <script>
         tailwind.config = {
             theme: {
@@ -37,25 +37,37 @@
 
     <!-- ========== HEADER ========== -->
     <header class="sticky top-0 z-50 bg-slate-900/65 backdrop-blur-md border-b border-white/10 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-            <!-- Linha principal: logo + nome -->
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col items-center">
+            <!-- Linha principal: ícone + nome -->
             <div class="flex items-center gap-3">
-                <img 
-                    src="imagem/WhatsApp%20Image%202026-09-18%20at%2019.56.04.jpeg" 
-                    alt="SAI - Sistemas Alerta Inteligente"
-                    class="h-10 w-auto object-contain rounded-md"
-                />
-                <span class="font-extrabold text-2xl tracking-tight text-white">
-                    Alerta <span class="text-amber-400">SJBV</span>
-                </span>
+                <div class="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 text-xl ring-2 ring-amber-500/30 shadow-lg shadow-amber-500/10">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <!-- Linha principal: logo + nome -->
+<div class="flex items-center gap-3">
+
+    <img 
+        src="img/logo.jpeg" 
+        alt="SAI - Sistemas Alerta Inteligente"
+        class="w-12 h-12 object-contain"
+    >
+
+    <span class="font-extrabold text-2xl tracking-tight text-white">
+        Alerta <span class="text-amber-400">SJBV</span>
+    </span>
+
+</div>
+              
             </div>
+            <!-- Subtítulo com badge -->
+    
         </div>
     </header>
 
     <!-- ========== PÁGINA ÚNICA – VISÃO DA COMUNIDADE ========== -->
     <main>
 
-        <!-- ========== HERO REFORMULADO ========== -->
+        <!-- ========== HERO REFORMULADO (sem barra branca) ========== -->
         <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-[#0f172a] to-slate-900 text-white py-24 px-4">
             <!-- Formas geométricas decorativas -->
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
@@ -154,7 +166,7 @@
 
         <!-- Contato / Formulário -->
         <section id="contato" class="relative bg-gradient-to-br from-amber-50/80 via-white to-amber-50/60 border-y border-amber-200/50 py-16 px-4">
-            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cGF0aCBkPSJNMzAgMTBhMjAgMjAgMCAw IDEgMjAgMjAgMjAgMjAgMCAwIDEtNDAgMCAyMCAyMCAwIDAgMSAyMC0yMHoiIGZpbGw9InJnYmEoMjQ1LDE1OCwxMSwwLjA0KSIvPjwvc3ZnPg==')] opacity-40"></div>
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cGF0aCBkPSJNMzAgMTBhMjAgMjAgMCAwIDEgMjAgMjAgMjAgMjAgMCAwIDEtNDAgMCAyMCAyMCAwIDAgMSAyMC0yMHoiIGZpbGw9InJnYmEoMjQ1LDE1OCwxMSwwLjA0KSIvPjwvc3ZnPg==')] opacity-40"></div>
             <div class="relative max-w-4xl mx-auto text-center">
                 <span class="inline-block text-amber-700 font-semibold text-sm uppercase tracking-wider bg-amber-200/40 px-4 py-1 rounded-full border border-amber-300/30 backdrop-blur-sm">
                     <i class="fa-regular fa-message mr-1"></i> Participe
@@ -196,13 +208,13 @@
 
     <!-- ========== FOOTER ========== -->
     <footer class="bg-slate-950 text-slate-400 py-8 border-t border-slate-800/80 text-center">
-        <div class="max-w-7xl mx-auto px-4 text-center text-sm">
-            <div class="flex items-center justify-center gap-2">
-                <i class="fa-regular fa-copyright text-slate-600"></i>
-                <span>Projeto de Extensão — Curso de Tecnologia em Sistemas para a Internet (TSI) — 2026/2027</span>
-            </div>
-            <p class="mt-2 text-xs text-slate-600/80">Desenvolvido para apoio e prevenção de riscos — Alerta SJBV</p>
-        </div>
+       <div class="max-w-7xl mx-auto px-4 text-center text-sm">
+    <div class="flex items-center justify-center gap-2">
+        <i class="fa-regular fa-copyright text-slate-600"></i>
+        <span>Projeto de Extensão — Curso de Tecnologia em Sistemas para a Internet (TSI) — 2026/2027</span>
+    </div>
+    <p class="mt-2 text-xs text-slate-600/80">Desenvolvido para apoio e prevenção de riscos — Alerta SJBV</p>
+</div>
     </footer>
 
 </body>
